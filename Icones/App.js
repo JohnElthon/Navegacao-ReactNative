@@ -1,11 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { StyleSheet, Text, TouchableNativeFeedbackBase, TouchableOpacity, View } from 'react-native';
+
+import Icon from '@react-native-vector-icons/feather'
+
+const MyIcone = <Icon name="cloud-lightning" size={50} color="#FF0000"></Icon>
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <TouchableOpacity>
+     <Icon name='chrome' size={30} color="#0000ff"/>
+     <Text>Google</Text>
+     </TouchableOpacity>
+     
+     
+
     </View>
   );
 }
