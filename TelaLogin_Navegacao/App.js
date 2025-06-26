@@ -1,11 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
+import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+
+import { NavigationContainer } from '@react-navigation/native';//Container que gerencia a navegação
+import { createStackNavigator } from '@react-navigation/stack';//Cria a navegação em pilha (stack)
+
+import Login from './pages/Login';
+import Home from './pages/Home';
+import Sobre from './pages/Sobre';
+import Contatos from './pages/Contato';
+
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text>teste</Text>
+      
     </View>
   );
 }
