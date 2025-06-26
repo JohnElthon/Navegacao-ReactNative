@@ -1,10 +1,13 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 export default function Sobre() {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <Text>Página Sobre</Text>
+      <Button title='Ir para Contatos' onPress={()=>navigation.navigate('Contatos')}></Button>
      
     </View>
   );
