@@ -9,13 +9,17 @@ import Home from './pages/Home';
 import Sobre from './pages/Sobre';
 import Contatos from './pages/Contato';
 
+const Stack = createStackNavigator();
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>teste</Text>
-      
-    </View>
+  <NavigationContainer>
+    <Stack.Navigator>
+      <Stack.Screen name='Login' component={Login}/>
+    </Stack.Navigator>
+    
+  </NavigationContainer>
   );
 }
 
