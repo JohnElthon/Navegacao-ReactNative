@@ -1,32 +1,29 @@
-import React from 'react';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import React, { useState } from 'react';
+import { View, TextInput, Button, Alert, StyleSheet } from 'react-native';
 
-export default function Login(){
-    return(
-         <View style={styles.container}>
-          
-              <Text>Faça Login</Text>
-              <TextInput placeholder="Nome" style={styles.input} />
-             
-            </View> 
+export default function Login({ navigation }) {
+  const [nome, setNome] = useState('');
+  const [email, setEmail] = useState('');
 
-    );
+  const validarLogin = () => {
+    if (!nome || !email) {
+      alert('Digite um usuário');
+    } else {
+      navigation.navigate('Home', { nome });
+    }
+  };
+
+  return (
+    <View style={styles.container}>
+      <TextInput placeholder="Nome" style={styles.input} onChangeText={setNome} />
+      <TextInput placeholder="Email" style={styles.input} onChangeText={setEmail} />
+      <Button title="Entrar" onPress={validarLogin} />
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
-    container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-    },
-    input: {
-    height: 40,
-    borderColor: 'gray',
-    borderWidth: 1,
-    width: '80%',
-    marginTop: 10,
-    paddingHorizontal: 10,
-    },
-    });
-    
+  container: { padding: 20 },
+  input: { borderBottomWidth: 1, 
+ marginBottom: 15 },
+});
