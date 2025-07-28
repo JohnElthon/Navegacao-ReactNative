@@ -1,22 +1,14 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-
-import Routes from './src/routes';
-
-
-
-export default function App() {
+ 
+export default function Sobre() {
   return (
-    <NavigationContainer>
-
-      <Routes></Routes>
-      
-
-    </NavigationContainer>
+    <View style={styles.container}>
+      <Text>Sobre</Text>
+    </View>
   );
 }
-
+ 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
