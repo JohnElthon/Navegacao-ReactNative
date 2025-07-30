@@ -7,6 +7,7 @@ import { createStackNavigator } from '@react-navigation/stack';//Cria a navegaç
 import Home from './pages/Home';
 import Sobre from './pages/Sobre';
 import Contatos from './pages/Contatos';
+import
 
 const Stack = createStackNavigator();// Cria o objeto de navegação em pilha
 

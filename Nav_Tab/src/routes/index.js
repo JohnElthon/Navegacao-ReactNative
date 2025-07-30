@@ -3,9 +3,9 @@ import { StyleSheet, Text, View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Feather from '@react-native-vector-icons/feather';
  
-import Home from '../pages/Home';
 import Sobre from '../pages/Sobre';
 import Contato from '../pages/Contato';
+import stackRoutes from './stackRoutes'
  
 export default function Routes() {
   const Tab = createBottomTabNavigator();
@@ -23,7 +23,7 @@ export default function Routes() {
         borderTopWidth:0
       }
     }}>
-      <Tab.Screen name = 'Home' component={Home} options={{
+      <Tab.Screen name = 'stackRoutes' component={stackRoutes} options={{
         tabBarLabel:'Início',
         tabBarIcon:({color,size})=><Feather name="home" size={20} color={color} />}}/>
       <Tab.Screen name = 'Sobre' component={Sobre} options={{tabBarIcon:({color,size})=><Feather name="info" size={20} color={color} />}}/>

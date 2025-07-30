@@ -1,12 +1,12 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-import { createStackNavigator } from '@react-navigation/stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Home from '../pages/Home';
 import Detalhes from '../pages/Detalhes';
 
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 
 
 export default function StackRoutes() {
